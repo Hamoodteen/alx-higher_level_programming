@@ -26,18 +26,17 @@ size_t print_listint(const listint_t *h)
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *nn;
-	int copy;
 
 	if (head == NULL)
 		return (NULL);
-	memcpy(&copy, &n, sizeof(int));
+
 	nn = malloc(sizeof(listint_t));
 	if (nn == NULL)
 	{
 		free(nn);
 		return (NULL);
 	}
-	nn->n = copy;
+	nn->n = n;
 	nn->next = *head;
 	*head = nn;
 	return (nn);
