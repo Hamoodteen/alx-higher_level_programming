@@ -7,13 +7,13 @@ if __name__ == '__main__':
         exit(1)
     match argv[2]:
         case "+":
-            print("{:d} + {:d} = {:d}".format(argv[1], argv[3], add(argv[1], argv[3])))
+            print("{:d} + {:d} = {:d}".format(argv[1], argv[3], add(int(argv[1]), int(argv[3]))))
         case "-":
-            print("{:d} - {:d} = {:d}".format(argv[1], argv[3], sub(argv[1], argv[3])))
+            print("{:d} - {:d} = {:d}".format(argv[1], argv[3], sub(int(argv[1]), int(argv[3]))))
         case "*":
-            print("{:d} * {:d} = {:d}".format(argv[1], argv[3], mul(argv[1], argv[3])))
+            print("{:d} * {:d} = {:d}".format(argv[1], argv[3], mul(int(argv[1]), int(argv[3]))))
         case "/":
-            print("{:d} / {:d} = {:d}".format(argv[1], argv[3], div(argv[1], argv[3])))
+            print("{:d} / {:d} = {:d}".format(argv[1], argv[3], div(int(argv[1]), int(argv[3]))))
         case _:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
