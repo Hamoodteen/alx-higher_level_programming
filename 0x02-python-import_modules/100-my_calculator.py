@@ -2,7 +2,7 @@
 from calculator_1 import *
 from sys import argv, exit
 if __name__ == '__main__':
-    if len(argv) != 3:
+    if len(argv) != 4:
         print("Usage: {} <a> <operator> <b>".format(argv[0]))
         exit(1)
     match argv[2]:
