@@ -8,4 +8,4 @@ if __name__ == "__main__":
         print("{:d} arguments:".format(l - 1) if l > 2 else "1 argument:")
         for i in range(1, l):
             j = argv[i]
-            print("{:d}: {:s}".format(i, j))
+            print("{:d}: {}".format(i, j))
