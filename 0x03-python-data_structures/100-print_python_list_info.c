@@ -1,5 +1,5 @@
-#include <python3.4/cpython/listobject.h>
-#include <python3.4/cpython/object.h>
+#include <python3.10/cpython/listobject.h>
+#include <python3.10/cpython/object.h>
 void print_python_list_info(PyObject *p)
 {
 	Py_ssize_t i;
