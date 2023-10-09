@@ -6,5 +6,5 @@ def delete_at(my_list=[], idx=0):
     for i in my_list:
         if i != my_list[idx]:
             new_list.append(i)
-            my_list[idx] = None
+    my_list[idx] = None
     return new_list
