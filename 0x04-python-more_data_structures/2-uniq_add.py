@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
     myset = set()
-    myset.append(my_list[i] for i in range(len(my_list)))
+    for i in range(len(my_list)):
+        myset.add(my_list[i])
     j = 0
     for i in myset:
-        j += myset[i]
+        j += i
     return j
