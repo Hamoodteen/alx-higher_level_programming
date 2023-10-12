@@ -2,6 +2,7 @@
 def print_sorted_dictionary(a_dictionary):
     sort = a_dictionary.copy()
     sorted(sort)
-    for i in sort:
-        for j in sort.values():
-            print("{}:{}".format(i, j))
+    for i, j in sort.items():
+        print("{}: {}".format(i, j))
+a_dictionary = { 'language': "C", 'Number': 89, 'track': "Low level", 'ids': [1, 2, 3] }
+print_sorted_dictionary(a_dictionary)
