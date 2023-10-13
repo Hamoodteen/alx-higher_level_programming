@@ -6,4 +6,3 @@ def roman_to_int(roman_string):
     thousands = {'M':1000,'MM':2000,'MMM':3000}
     if type(roman_string) != str or roman_string is None:
         return 0
- 
