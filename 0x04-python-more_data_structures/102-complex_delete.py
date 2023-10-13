@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 def complex_delete(a_dictionary, value):
-    deletion = a_dictionary.copy()
+    deletion = []
     if value not in a_dictionary:
         return a_dictionary
-    for i, j in deletion.items():
+    for i, j in a_dictionary.items():
         if j == value:
             deletion.append(i)
     for k in deletion:
