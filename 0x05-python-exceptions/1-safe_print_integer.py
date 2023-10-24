@@ -4,5 +4,5 @@ def safe_print_integer(value):
         print(int(value))
         return True
     except ValueError:
-        print("{} is not an integer".format(value))
+        print("{} is not an integer".format("{value:d}"))
         return False
