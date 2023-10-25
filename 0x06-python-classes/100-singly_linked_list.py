@@ -5,7 +5,7 @@ class Node:
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = None
-    
+
     @property
     def data(self):
         return self.__data
@@ -26,11 +26,12 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 class SinglyLinkedList:
 
     def __init__(self):
         self.head = None
-    
+
     def sorted_insert(self, value):
         a = Node(value)
         if self.head is None or value < self.head.data:
