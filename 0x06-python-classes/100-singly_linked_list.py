@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+""" Node """
+
 
 class Node:
-
+    """ Declare """
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node = None
@@ -26,9 +28,11 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+""" Linked list """
+
 
 class SinglyLinkedList:
-
+    """ Declare """
     def __init__(self):
         self.head = None
 
