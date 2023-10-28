@@ -118,3 +118,10 @@ only
 .
 <BLANKLINE>
 <BLANKLINE>
+>>> text_indentation("yes.    yes:    no?")
+yes.
+<BLANKLINE>
+    yes:
+<BLANKLINE>
+    no?
+<BLANKLINE>
