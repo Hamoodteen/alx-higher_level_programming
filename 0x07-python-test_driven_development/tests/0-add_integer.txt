@@ -43,3 +43,7 @@ TypeError: a must be an integer
 102
 >>> add_integer(False)
 98
+>>> add_integer(2 + 4j)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer

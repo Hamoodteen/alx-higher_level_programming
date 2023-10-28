@@ -104,3 +104,8 @@ TypeError: matrix must be a matrix (list of lists)of integers/floats
 Traceback (most recent call last):
     ...
 TypeError: Each row of the matrix must have the same size
+>>> matrix18 = [[1, 2, 3 + 4j], [5, 6, 7 + 8j]]
+>>> matrix_divided(matrix18, 1)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists)of integers/floats
