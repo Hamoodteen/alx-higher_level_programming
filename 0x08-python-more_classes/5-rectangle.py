@@ -25,7 +25,7 @@ class Rectangle():
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        return "Bye rectangle..."
+        print("Bye rectangle...")
 
     @property
     def width(self):
