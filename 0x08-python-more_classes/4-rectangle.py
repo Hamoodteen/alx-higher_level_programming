@@ -22,14 +22,7 @@ class Rectangle():
         return mystr
 
     def __repr__(self):
-        mystr = ""
-        if self.__width == 0 or self.__height == 0:
-            return ""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                mystr += "#"
-            mystr += "\n" if i != self.__height - 1 else ""
-        return mystr
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     @property
     def width(self):
