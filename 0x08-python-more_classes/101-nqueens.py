@@ -4,19 +4,19 @@ commentttttttttttttttttttttttttttttt
 """
 
 
-import sys
+from sys import argv, stderr
 
-if len(sys.argv) != 2:
-    sys.stderr.write("Usage: nqueens N\n")
-    sys.exit(1)
+if len(argv) != 2:
+    stderr.write("Usage: nqueens N\n")
+    exit(1)
 try:
-    na = int(sys.argv[1])
+    na = int(argv[1])
 except ValueError:
-    sys.stderr.write("N must be a number\n")
-    sys.exit(1)
+    stderr.write("N must be a number\n")
+    exit(1)
 if na < 4:
-    sys.stderr.write("N must be at least 4\n")
-    sys.exit(1)
+    stderr.write("N must be at least 4\n")
+    exit(1)
 if na == 4:
     ls1 = [[0, 1], [1, 3], [2, 0], [3, 2]]
     print(ls1)
