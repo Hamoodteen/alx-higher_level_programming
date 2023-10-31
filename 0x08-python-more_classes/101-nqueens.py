@@ -4,9 +4,9 @@ commentttttttttttttttttttttttttttttt
 """
 
 
-from sys import argv, stderr
+from sys import argv
 
-if len(argv) != 2:
+if len(argv) is not 2:
     print("Usage: nqueens N")
     exit(1)
 try:
