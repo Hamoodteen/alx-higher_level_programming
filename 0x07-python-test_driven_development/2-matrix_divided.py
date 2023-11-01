@@ -18,8 +18,8 @@ def matrix_divided(matrix, div):
     for i in matrix:
         for j in i:
             if not isinstance(j, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists)\
-                                of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists)"\
+                                "of integers/floats")
             newlist.append(round((j / div), 2))
         newmat.append(newlist)
         newlist = []
