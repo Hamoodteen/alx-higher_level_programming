@@ -10,6 +10,10 @@ class TestMaxInteger(unittest.TestCase):
     def test_max(self):
         self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)
         self.assertNotEqual(max_integer([1, 2, 3, 4, 5]), 2)
+        self.assertEqual(max_integer([5]), 5)
+        self.assertNotEqual(max_integer([5]), 2)
+        self.assertEqual(max_integer([1, 2, 5, 4, 3]), 5)
+        self.assertNotEqual(max_integer([1, 2, 5, 4, 3]), 2)
         self.assertIsNone(max_integer([]))
         self.assertEqual(max_integer(["a", "b", "c"]), "c")
         self.assertNotEqual(max_integer(["x", "u", "a", "e"]), "e")
