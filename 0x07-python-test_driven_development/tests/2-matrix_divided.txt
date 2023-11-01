@@ -55,7 +55,7 @@ TypeError: div must be a number
 >>> matrix_divided(matrix7, 3)
 Traceback (most recent call last):
     ...
-TypeError: matrix must be a matrix (list of lists)of integers/floats
+TypeError: matrix must be a matrix (list of lists )of integers/floats
 >>> matrix8 = [[1], [2], [3]]
 >>> matrix_divided(matrix8, 1)
 [[1.0], [2.0], [3.0]]
@@ -68,7 +68,7 @@ TypeError: matrix must be a matrix (list of lists)of integers/floats
 >>> matrix_divided(matrix10, 2)
 Traceback (most recent call last):
     ...
-TypeError: matrix must be a matrix (list of lists)of integers/floats
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix11 = [[1, 2, 4, 6], [2, 9, 9, 2]]
 >>> matrix_divided(matrix11, 0)
 Traceback (most recent call last):
@@ -98,7 +98,7 @@ ZeroDivisionError: division by zero
 >>> matrix_divided(matrix16, 16)
 Traceback (most recent call last):
     ...
-TypeError: matrix must be a matrix (list of lists)of integers/floats
+TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix17 = [[1, 2, 1], [4, 2, 7], [(0, 2, 1)]]
 >>> matrix_divided(matrix17, 99)
 Traceback (most recent call last):
@@ -108,4 +108,4 @@ TypeError: Each row of the matrix must have the same size
 >>> matrix_divided(matrix18, 1)
 Traceback (most recent call last):
     ...
-TypeError: matrix must be a matrix (list of lists)of integers/floats
+TypeError: matrix must be a matrix (list of lists) of integers/floats
