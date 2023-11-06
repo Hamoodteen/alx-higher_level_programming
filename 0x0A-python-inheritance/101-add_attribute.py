@@ -4,5 +4,6 @@
 
 def add_attribute(op, n, v):
     """commentttttttttttttttttttttttttttt"""
-    if not setattr(op, n, v):
+    setattr(op, n, v)
+    if op.n != v:
         raise TypeError("can't add new attribute")
