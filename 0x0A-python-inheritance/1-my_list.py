@@ -5,4 +5,5 @@
 class MyList(list):
     """commentttttttttttttttttttttttttttt"""
     def print_sorted(self):
+        """commentttttttttttttttttttttttttttt"""
         print(sorted(self))
