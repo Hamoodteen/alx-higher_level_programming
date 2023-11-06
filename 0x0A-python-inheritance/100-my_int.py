@@ -5,7 +5,7 @@
 class MyInt(int):
     """commentttttttttttttttttttttttttttt"""
     def __eq__(self, other):
-        int.__ne__(other)
+        return True if int.__ne__(self, other) else False
 
     def __ne__(self, other):
-        int.__eq__(other)
+        return True if int.__eq__(self, other) else False
