@@ -4,5 +4,6 @@
 
 def read_file(filename=""):
     """commentttttttttttttttttttttttttttt"""
-    with open(filename, encoding="UTF-8") as f:
-        fr = f.read()
+    with open(filename, "r", encoding="UTF-8") as f:
+        for i in f:
+            print(f, end="")
