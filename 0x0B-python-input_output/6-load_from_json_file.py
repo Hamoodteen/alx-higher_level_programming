@@ -8,4 +8,4 @@ import json
 def load_from_json_file(filename):
     """commentttttttttttttttttttttttttttt"""
     with open(filename, "r", encoding="UTF-8") as f:
-        x = json.load(f)
+        return json.load(f)
