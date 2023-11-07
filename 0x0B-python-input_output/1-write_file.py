@@ -4,8 +4,5 @@
 
 def write_file(filename="", text=""):
     """commentttttttttttttttttttttttttttt"""
-    try:
-        with open(filename, "w+", encoding="UTF-8") as f:
-            f.write(text)
-    except PermissionError:
-        print("Permission denied")
+    with open(filename, "w", encoding="UTF-8") as f:
+        f.write(text)
