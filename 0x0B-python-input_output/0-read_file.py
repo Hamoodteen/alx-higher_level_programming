@@ -6,4 +6,4 @@ def read_file(filename=""):
     """commentttttttttttttttttttttttttttt"""
     with open(filename, "r", encoding="UTF-8") as f:
         for i in f:
-            print(f, end="")
+            print(i, end="")
