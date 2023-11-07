@@ -4,5 +4,5 @@
 
 def write_file(filename="", text=""):
     """commentttttttttttttttttttttttttttt"""
-    with open(filename, "w", encoding="UTF-8") as f:
+    with open(filename, encoding="UTF-8") as f:
         f.write(text)
