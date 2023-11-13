@@ -15,32 +15,40 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """commenttttttttttttttttttttttttttttttt"""
         return self.__width
 
     @width.setter
     def width(self, value):
+        """commenttttttttttttttttttttttttttttttt"""
         self.__width = value
 
     @property
     def height(self):
+        """commenttttttttttttttttttttttttttttttt"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """commenttttttttttttttttttttttttttttttt"""
         self.__height = value
 
     @property
     def x(self):
+        """commenttttttttttttttttttttttttttttttt"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """commenttttttttttttttttttttttttttttttt"""
         self.__x = value
 
     @property
     def y(self):
+        """commenttttttttttttttttttttttttttttttt"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """commenttttttttttttttttttttttttttttttt"""
         self.__y = value
