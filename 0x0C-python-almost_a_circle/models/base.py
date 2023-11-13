@@ -29,3 +29,11 @@ class Base:
                 json.dump([], f)
             else:
                 json.dump(cls.to_json_string(list_objs), f)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """commenttttttttttttttttttttttttttttttt"""
+        if not json_string:
+            return []
+        else:
+            return json.loads(json_string)
