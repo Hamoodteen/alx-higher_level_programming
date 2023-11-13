@@ -81,7 +81,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """commenttttttttttttttttttttttttttttttt"""
         if args and len(args) != 0 and len(args) <= 5:
             if len(args) > 0:
@@ -94,3 +94,9 @@ class Rectangle(Base):
                 self.x = args[3]
             if len(args) > 4:
                 self.y = args[4]
+        else:
+            self.id = args['id']
+            self.width = args['width']
+            self.height = args['height']
+            self.x = args['x']
+            self.y = args['y']
