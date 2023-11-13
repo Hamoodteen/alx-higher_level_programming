@@ -28,4 +28,5 @@ class Base:
             if not list_objs:
                 json.dump([], f)
             else:
-                json.dump(cls.to_json_string(list_objs), f)
+                dict_list = [obj.to_dict() for obj in list_objs]
+                json.dump(dict_list, f)
