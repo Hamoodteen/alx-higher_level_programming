@@ -2,19 +2,11 @@
 """Module rectangle.py
 Defines class Rectangle that inherits from Base.
 """
-import json
 from models.base import Base
 
 
 class Rectangle(Base):
-    """a class Rectangle that inherits from Base.
-    Public instance methods:
-       - area()
-       - display()
-       - to_dictionary()
-       - update()
-    """
-
+    """a class Rectangle that inherits from Base."""
     def __init__(self, width, height, x=0, y=0, id=None):
         self.__width = width
         self.__height = height
