@@ -84,7 +84,7 @@ class Rectangle(Base):
     def update(self, *args):
         """commenttttttttttttttttttttttttttttttt"""
         if args and len(args) != 0:
-            if len(args) >= 1:
+            if len(args) > 0:
                 self.id = args[0]
             if len(args) > 1:
                 self.width = args[1]
