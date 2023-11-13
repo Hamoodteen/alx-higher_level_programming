@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """commenttttttttttttttttttttttttttttttt"""
 import json
+import csv
 
 
 class Base:
@@ -37,3 +38,28 @@ class Base:
             return []
         else:
             return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        """commenttttttttttttttttttttttttttttttt"""
+        pass
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """commenttttttttttttttttttttttttttttttt"""
+        with open(
+                "{}.csv".format(cls.__name__),
+                "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            if not list_objs:
+                w.writerow([])
+            else:
+                f.write(cls.to_json_string(list_objs))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """commenttttttttttttttttttttttttttttttt"""
+        with open(
+                "{}.csv".format(cls.__name__),
+                "r", newline="", encoding="utf-8") as f:
+            print(f.read())
