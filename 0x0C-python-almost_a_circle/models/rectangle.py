@@ -4,8 +4,25 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """commenttttttttttttttttttttttttttttttt"""
+    """a class Rectangle that inherits from Base.
+    Public instance methods:
+       - area()
+       - display()
+       - to_dictionary()
+       - update()
+    """
+
     def __init__(self, width, height, x=0, y=0, id=None):
+        """Initialized Rectangle instance.
+
+        Args:
+           - __width: width of the Rectangle
+           - __height: height of the Rectangle.
+           - __x: position
+           - __y: position
+           - id: id
+        """
+
         self.__width = width
         self.__height = height
         self.__x = x
