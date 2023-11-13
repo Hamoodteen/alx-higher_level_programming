@@ -63,3 +63,15 @@ class Rectangle(Base):
     def area(self):
         """commenttttttttttttttttttttttttttttttt"""
         return self.__width * self.__height
+
+    def display(self):
+        """commenttttttttttttttttttttttttttttttt"""
+
+        for yy in range(self.__y):
+            print()
+        for i in range(self.__height):
+            for xx in range(self.__x):
+                print(" ", end="")
+            for j in range(self.__width):
+                print("#", end="")
+            print()
