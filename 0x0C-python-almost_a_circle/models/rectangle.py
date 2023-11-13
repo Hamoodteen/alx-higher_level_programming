@@ -83,8 +83,9 @@ class Rectangle(Base):
 
     def update(self, *args):
         """commenttttttttttttttttttttttttttttttt"""
-        self.id = args[0]
-        self.width(args[1])
-        self.height(args[2])
-        self.x(args[3])
-        self.y(args[4])
+        if len(args) <= 5:
+            self.id = args[0]
+            self.width(args[1])
+            self.height(args[2])
+            self.x(args[3])
+            self.y(args[4])
