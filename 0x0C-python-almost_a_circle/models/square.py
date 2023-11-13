@@ -26,3 +26,20 @@ class Square(Rectangle):
             raise ValueError("width must be >= 0")
         self.width = value
         self.__size = value
+
+    def update(self, *args, **kwargs):
+        """commenttttttttttttttttttttttttttttttt"""
+        if args and len(args) != 0 and len(args) <= 5:
+            if len(args) > 0:
+                self.id = args[0]
+            if len(args) > 1:
+                self.size = args[1]
+            if len(args) > 2:
+                self.x = args[2]
+            if len(args) > 3:
+                self.y = args[3]
+        elif kwargs:
+            self.id = kwargs.get('id', self.id)
+            self.size = kwargs.get('size', self.size)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)
