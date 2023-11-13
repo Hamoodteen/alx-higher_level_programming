@@ -11,7 +11,7 @@ class Rectangle(Base):
         self.__height = height
         self.__x = x
         self.__y = y
-        super.__init__(id)
+        super().__init__(id)
 
     @property
     def width(self):
@@ -60,3 +60,4 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
