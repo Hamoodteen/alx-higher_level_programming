@@ -7,12 +7,12 @@ from models.rectangle import Rectangle
 class Square(Rectangle):
     """commenttttttttttttttttttttttttttttttt"""
     def __init__(self, size, x=0, y=0, id=None):
-        self.__size = size
+        self.size = size
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".format(
-            self.id, self.x, self.y, self.__size)
+            self.id, self.x, self.y, self.size)
 
     @property
     def size(self):
