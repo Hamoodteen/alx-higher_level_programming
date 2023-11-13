@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """commenttttttttttttttttttttttttttttttt"""
-
 from models.base import Base
 
 
