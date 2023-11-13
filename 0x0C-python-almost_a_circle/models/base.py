@@ -27,4 +27,5 @@ class Base:
         with open("{}.json".format(cls.__name__), "w", encoding="utf-8") as f:
             if not list_objs:
                 json.dump([], f)
-            json.dump(cls.to_json_string(list_objs), f)
+            else:
+                json.dump(cls.to_json_string(list_objs), f)
