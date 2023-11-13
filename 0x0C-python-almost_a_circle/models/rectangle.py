@@ -96,7 +96,7 @@ class Rectangle(Base):
                 self.y = args[4]
         elif kwargs:
             self.id = kwargs.get('id', self.id)
-            self.width = kwargs.get('id', self.width)
-            self.height = kwargs.get('id', self.height)
-            self.x = kwargs.get('id', self.x)
-            self.y = kwargs.get('id', self.y)
+            self.width = kwargs.get('width', self.width)
+            self.height = kwargs.get('height', self.height)
+            self.x = kwargs.get('x', self.x)
+            self.y = kwargs.get('y', self.y)
