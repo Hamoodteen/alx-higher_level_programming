@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """commenttttttttttttttttttttttttttttttt"""
 
-from base import Base
+Base = __import__("base").Base
 
 
 class Rectangle(Base):
