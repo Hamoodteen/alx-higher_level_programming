@@ -20,3 +20,11 @@ class Base:
         if not list_dictionaries:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """commenttttttttttttttttttttttttttttttt"""
+        with open("{}.json".format(cls), "w", encoding="utf-8") as f:
+            if not list_objs:
+                json.dump([], f)
+            json.dump(cls.to_json_string(list_objs), f)
