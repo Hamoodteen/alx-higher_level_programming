@@ -1,2 +1,2 @@
 -- This is a single-line comment
-SELECT *
+SHOW DATABASES;
