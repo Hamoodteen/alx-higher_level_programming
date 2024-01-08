@@ -2,6 +2,6 @@
 // commenttttttttttttttttttttttttttttt
 
 const a = 'C is fun';
-const b = '\nPython is cool';
-const c = '\nJavaScript is amazing';
-console.log(a, b, c);
+const b = 'Python is cool';
+const c = 'JavaScript is amazing';
+console.log(a + '\n' + b + '\n' + c);
