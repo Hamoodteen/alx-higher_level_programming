@@ -3,14 +3,18 @@
 
 module.exports = class Square extends require('./5-rectangle') {
   charPrint (c) {
-    const CX = (c === undefined ? 'X' : String(c));
-    let sq = '';
-    for (let i = 0; i < this.size; i++) {
-      for (let j = 0; j < this.size; j++) {
-        sq += CX;
+    if (c === undefined) {
+      this.print();
+    } else {
+      const CX = String(c);
+      let sq = '';
+      for (let i = 0; i < this.size; i++) {
+        for (let j = 0; j < this.size; j++) {
+          sq += CX;
+        }
+        sq += '\n';
       }
-      sq += '\n';
+      console.log(sq.slice(0, -1));
     }
-    console.log(sq.slice(0, -1));
   }
 };
