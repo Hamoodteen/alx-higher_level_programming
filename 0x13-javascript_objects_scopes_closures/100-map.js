@@ -2,7 +2,7 @@
 
 // commenttttttttttttttttttttttttttttt
 
-const data = require('./100-data.js').list;
-console.log(data);
-const newlist = data.map((x) => x * data.indexOf(x));
+const data = require('./100-data.js');
+console.log(data.list);
+const newlist = data.list.map((x) => x * data.list.indexOf(x));
 console.log(newlist);
