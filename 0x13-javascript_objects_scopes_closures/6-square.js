@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const Rectangle = require('./4-rectangle');
+const Rectangle = require('./5-rectangle');
 
 // commenttttttttttttttttttttttttttttt
 
@@ -13,7 +13,15 @@ module.exports = class Square extends Rectangle {
     if (c === undefined) {
       this.print();
     } else {
-      for (let i = 0; i < this.height; i++) console.log(c.repeat(this.width));
+      const CX = String(c);
+      let sq = '';
+      for (let i = 0; i < this.size; i++) {
+        for (let j = 0; j < this.size; j++) {
+          sq += CX;
+        }
+        sq += '\n';
+      }
+      console.log(sq.slice(0, -1));
     }
   }
 };
