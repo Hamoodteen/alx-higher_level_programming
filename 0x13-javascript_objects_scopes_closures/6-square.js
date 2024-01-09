@@ -1,10 +1,7 @@
 #!/usr/bin/node
-
-const pastSquare = require('./5-rectangle');
-
 // commenttttttttttttttttttttttttttttt
 
-module.exports = class Square extends pastSquare {
+module.exports = class Square extends require('./5-rectangle') {
   constructor (size) {
     super(size, size);
   }
