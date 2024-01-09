@@ -1,4 +1,8 @@
 #!/usr/bin/node
 // commenttttttttttttttttttttttttttttt
 
-class Rectangle {}
+class Rectangle {
+  constructor () {
+
+  }
+}
