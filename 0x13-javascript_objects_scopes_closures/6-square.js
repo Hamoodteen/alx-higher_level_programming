@@ -7,14 +7,10 @@ module.exports = class Square extends require('./5-rectangle') {
   }
 
   charPrint (c) {
-    const CX = (c === undefined ? 'X' : String(c));
-    let sq = '';
-    for (let i = 0; i < this.size; i++) {
-      for (let j = 0; j < this.size; j++) {
-        sq += CX;
-      }
-      sq += '\n';
+    if (c === undefined) {
+      this.print();
+    } else {
+      for (let i = 0; i < this.height; i++) console.log(c.repeat(this.width));
     }
-    console.log(sq.slice(0, -1));
   }
 };
