@@ -16,7 +16,7 @@ if __name__ == "__main__":
         charset="utf8")
     cur = conn.cursor()
     cur.execute(f"SELECT *\
-                FROM states WHERE name = {argv[4]} ORDER BY id ASC")
+                FROM states WHERE name = {str(argv[4])} ORDER BY id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
