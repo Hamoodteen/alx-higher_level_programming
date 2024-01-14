@@ -15,6 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session()
     new_name = session.query(State).filter(State.name.like('%a%')).all()
-    session.delete(new_name)
-    session.commit()
-    session.close()
+    for state in new_name:
+        session.delete(state)
+        session.commit()
+        session.close()
