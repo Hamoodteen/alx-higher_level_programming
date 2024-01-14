@@ -15,7 +15,7 @@ if __name__ == "__main__":
         db=argv[3],
         charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT * FROM states WHERE UPPER(name) LIKE 'N%' ORDER BY id ASC")
+    cur.execute("SELECT * FROM states WHERE name='N%' ORDER BY id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
