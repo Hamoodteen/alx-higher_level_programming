@@ -16,7 +16,6 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     data = session.query(State).order_by(State.id)
-    current_state_id = None
     for instance in data:
         print(instance.id, instance.name, sep=": ")
         for city_ins in instance.cities:
