@@ -17,11 +17,9 @@ if __name__ == "__main__":
     session = Session()
     data = session.query(State).order_by(State.id)
     current_state_id = None
-    for city_id, city_name, state_id, state_name in data:
-        if state_id != current_state_id:
-            if current_state_id is not None:
-                print()
-            print(f"{state_id}: {state_name}")
-            current_state_id = state_id
-        print(f"    {city_id}: {city_name}")
+    for instance in data:
+        print(instance.id, instance.name, sep=": ")
+        for city_ins in instance.cities:
+            print("    ", end="")
+            print(city_ins.id, city_ins.name, sep=": ")
     session.close()
