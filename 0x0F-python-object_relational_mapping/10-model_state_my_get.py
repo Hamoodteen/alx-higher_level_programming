@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session()
     state = session.query(State)\
-        .filter(State.name.like('%' + argv[4] + '%')).order_by(State.id).first()
+        .filter(State.name.like('%' + argv[4] + '%')).order_by(State.id)
     if state:
         print("{}".format(state.id))
     else:
