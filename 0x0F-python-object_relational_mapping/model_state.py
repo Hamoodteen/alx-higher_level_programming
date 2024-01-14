@@ -16,6 +16,6 @@ if __name__ == "__main__":
                     autoincrement=True)
         name = Column(String(128), nullable=False)
 
-    from model_state import Base, State
-    engine = create_engine('sqlite://')
-    Base.metadata.create_all(engine)
+from model_state import Base, State
+engine = create_engine('sqlite://')
+Base.metadata.create_all(engine)
