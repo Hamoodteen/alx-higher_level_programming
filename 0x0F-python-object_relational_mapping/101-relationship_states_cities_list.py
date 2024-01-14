@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    data = session.query(State).order_by(State.id)
+    data = session.query(State).order_by(State.id.asc(), City.id.asc())
     for datum in data:
         print("{}: {}".format(datum.id, datum.name))
         for city in datum.cities:
