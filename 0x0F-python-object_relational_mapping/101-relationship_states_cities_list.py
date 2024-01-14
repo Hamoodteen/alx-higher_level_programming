@@ -15,9 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    data = session.query(City.id, City.name, State.name)\
-        .join(State, City.state_id == State.id)\
-        .order_by(City.id.asc()).all()
+    data = session.query(State).order_by(State.id)
     current_state_id = None
     for city_id, city_name, state_id, state_name in data:
         if state_id != current_state_id:
