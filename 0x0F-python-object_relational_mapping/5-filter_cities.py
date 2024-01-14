@@ -17,6 +17,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute("SELECT c.id, c.name, s.name\
                 FROM states s, cities c\
+                JOIN s ON c.state_id = s.id\
                 WHERE s.name LIKE BINARY %s\
                 ORDER BY c.id ASC",
                 (argv[4],))
