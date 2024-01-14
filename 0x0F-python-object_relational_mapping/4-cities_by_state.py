@@ -18,7 +18,7 @@ if __name__ == "__main__":
     cur.execute("SELECT states.name, cities.name, cities.id\
                 FROM states, cities\
                 WHERE cities.state_id = state.id\
-                ORDER BY id ASC")
+                ORDER BY cities.id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
