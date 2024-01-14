@@ -16,9 +16,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     session = Session()
     California = State(name='California')
-    session.add(California)
-    session.commit()
     San_Francisco = City(name='San Francisco', state=California)
+    session.add(California)
     session.add(San_Francisco)
     session.commit()
     states = session.query(City.id, City.name, State.name)\
