@@ -15,10 +15,10 @@ if __name__ == "__main__":
         db=argv[3],
         charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT c.id, c.name, s.name\
-                FROM states s, cities c\
-                JOIN s ON c.state_id = s.id\
-                WHERE s.name LIKE BINARY %s\
+    cur.execute("SELECT cities.name\
+                FROM cities\
+                JOIN states ON cities.state_id = states.id\
+                WHERE states.name LIKE BINARY %s\
                 ORDER BY c.id ASC",
                 (argv[4],))
     query_rows = cur.fetchall()
