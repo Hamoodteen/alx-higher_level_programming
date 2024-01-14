@@ -15,7 +15,7 @@ if __name__ == "__main__":
         db=argv[3],
         charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT states.name, cities.name, cities.id\
+    cur.execute("SELECT cities.name, cities.id, states.name\
                 FROM states, cities\
                 WHERE cities.state_id = state.id\
                 ORDER BY cities.id ASC")
