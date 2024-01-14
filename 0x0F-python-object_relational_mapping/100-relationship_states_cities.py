@@ -20,9 +20,3 @@ if __name__ == "__main__":
     session.add(California)
     session.add(San_Francisco)
     session.commit()
-    states = session.query(City.id, City.name, State.name)\
-        .join(State, City.state_id == State.id)\
-        .order_by(City.id.asc()).all()
-    for state in states:
-        print(state.id)
-    session.close()
