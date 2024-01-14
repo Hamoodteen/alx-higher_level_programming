@@ -15,9 +15,15 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(City.id, City.name, State.name)\
+    data = session.query(City.id, City.name, State.name)\
         .join(State, City.state_id == State.id)\
         .order_by(City.id.asc()).all()
-    for state in states:
-        print(state.id)
+    current_state_id = None
+    for city_id, city_name, state_id, state_name in data:
+        if state_id != current_state_id:
+            if current_state_id is not None:
+                print()
+            print(f"{state_id}: {state_name}")
+            current_state_id = state_id
+        print(f"    {city_id}: {city_name}")
     session.close()
