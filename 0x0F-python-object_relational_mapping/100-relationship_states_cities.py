@@ -15,6 +15,12 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     Base.metadata.create_all(engine)
     session = Session()
+    California = State(name='California')
+    session.add(California)
+    session.commit()
+    San_Francisco = City(name='San Francisco', state=California)
+    session.add(San_Francisco)
+    session.commit()
     states = session.query(City.id, City.name, State.name)\
         .join(State, City.state_id == State.id).all()
     for state in states:
