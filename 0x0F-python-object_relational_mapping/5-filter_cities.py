@@ -18,11 +18,11 @@ if __name__ == "__main__":
     cur.execute("SELECT cities.name\
                 FROM cities\
                 JOIN states ON cities.state_id = states.id\
-                AND states.name = %s\
+                WHERE states.name = %s\
                 ORDER BY cities.id ASC",
                 (argv[4],))
-    query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    rows = cur.fetchall()
+    tmp = list(row[0] for row in rows)
+    print(*tmp, sep=", ")
     cur.close()
     conn.close()
