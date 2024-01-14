@@ -18,7 +18,7 @@ if __name__ == "__main__":
     cur.execute("SELECT c.id, c.name, s.name\
                 FROM states s, cities c\
                 WHERE c.state_id = s.id\
-                AND s = %s\
+                AND s.name = %s\
                 ORDER BY c.id ASC",
                 (argv[4],))
     query_rows = cur.fetchall()
