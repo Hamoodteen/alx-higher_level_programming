@@ -16,5 +16,5 @@ if __name__ == "__main__":
                     autoincrement=True)
         name = Column(String(128), nullable=False)
 
-    engine = create_engine('sqlite://', echo=True)
+    engine = create_engine('sqlite://')
     Base.metadata.create_all(engine)
