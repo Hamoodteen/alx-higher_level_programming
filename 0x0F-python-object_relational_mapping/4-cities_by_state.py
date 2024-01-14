@@ -15,10 +15,10 @@ if __name__ == "__main__":
         db=argv[3],
         charset="utf8")
     cur = conn.cursor()
-    cur.execute("SELECT cities.name, cities.id, states.name\
-                FROM states, cities\
-                WHERE cities.state_id = state.id\
-                ORDER BY cities.id ASC")
+    cur.execute("SELECT c.name, c.id, s.name\
+                FROM states s, cities c\
+                WHERE c.state_id = s.id\
+                ORDER BY c.id ASC")
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
