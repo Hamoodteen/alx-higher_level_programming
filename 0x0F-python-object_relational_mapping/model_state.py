@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Start link class to table in database
 """
-import sys
 from sqlalchemy import create_engine, Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
