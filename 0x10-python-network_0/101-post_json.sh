@@ -1,3 +1,3 @@
 #!/bin/bash
 #commentttttttttttttttttttttttttttttt
-curl -X POST -H "Content-Type: application/json" -d $1 $2
+curl -s $1/$2 | jq '.' >/dev/null 2>&1 && echo "Valid JSON" || echo "Not a valid JSON"
