@@ -12,9 +12,4 @@ def find_peak(list_of_integers):
         return None
     if not sorted(list_of_integers):
         list_of_integers.sort()
-        return max(list_of_integers)
-    m = 0
-    for i in list_of_integers:
-        if i > m:
-            m = i
-    return m
+    return max(list_of_integers)
