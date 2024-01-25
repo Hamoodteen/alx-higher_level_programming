@@ -1,3 +1,3 @@
 #!/bin/bash
 #commentttttttttttttttttttttttttttttt
-if [[ $(curl -w "%{http_code}" -s -o /dev/null $1) == "200" ]]; then curl -s $1; fi
+curl -s -o /dev/null -w "%{http_code}" "$1" | tail -n +2 && curl -s "$1"
