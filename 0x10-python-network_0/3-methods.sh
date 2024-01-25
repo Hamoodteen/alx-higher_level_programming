@@ -1,3 +1,3 @@
 #!/bin/bash
 #commentttttttttttttttttttttttttttttt
-curl -X OPTIONS -s -o /dev/null -i "$1"
+curl -X OPTIONS --head -s -i "$1" | grep -i allow | sed '1d; s/Allow: //i'
