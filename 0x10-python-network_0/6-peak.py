@@ -2,6 +2,9 @@
 """ Test function find_peak """
 
 
+""" it will be O(n)"""
+
+
 def find_peak(list_of_integers):
     """ Test function find_peak """
 
