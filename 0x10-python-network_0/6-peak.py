@@ -10,6 +10,4 @@ def find_peak(list_of_integers):
 
     if len(list_of_integers) == 0:
         return None
-    if not sorted(list_of_integers):
-        list_of_integers.sort()
-    return max(list_of_integers)
+    return max(sorted(list_of_integers))
