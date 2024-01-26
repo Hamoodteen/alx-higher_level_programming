@@ -7,4 +7,4 @@ if __name__ == "__main__":
     import requests as rq
     headers = {'email': argv[2]}
     req = rq.post(argv[1], data=headers)
-    print("Your email is: {}".format(req.text))
+    print(req.text)
