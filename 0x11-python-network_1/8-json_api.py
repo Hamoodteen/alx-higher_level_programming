@@ -13,7 +13,6 @@ if __name__ == "__main__":
         if not rj:
             print("No result")
         else:
-            rhg = rj.headers
-            print("[{}] {}".format(rhg.get('id'), rhg.get('name')))
+            print("[{}] {}".format(rj.get('id'), rj.get('name')))
     except ValueError:
         print("Not a valid JSON")

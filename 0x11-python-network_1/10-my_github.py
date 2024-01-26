@@ -11,3 +11,5 @@ if __name__ == "__main__":
     if r.status_code == 200:
         rj = r.json()
         print(rj.get('id'))
+    else:
+        print(None)
