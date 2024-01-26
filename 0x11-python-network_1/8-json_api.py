@@ -10,7 +10,7 @@ if __name__ == "__main__":
     req = rq.post("http://0.0.0.0:5000/search_user", data=data)
     try:
         rj = req.json()
-        if rj == {}:
+        if not rj:
             print("No result")
         else:
             rhg = req.headers
