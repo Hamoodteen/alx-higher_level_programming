@@ -5,9 +5,9 @@
 if __name__ == "__main__":
     from sys import argv
     import requests as rq
-    headers = {'q': argv[1] if len(argv) > 1 else ""}
+    header = argv[1] if len(argv) > 1 else ""
     try:
-        req = rq.post("http://0.0.0.0:5000/search_user", data=headers)
+        req = rq.post("http://0.0.0.0:5000/search_user", {"q": header})
         rj = req.json()
         if rj == {}:
             print("No result")
