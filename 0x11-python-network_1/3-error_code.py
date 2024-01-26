@@ -9,6 +9,6 @@ if __name__ == "__main__":
     try:
         with urlr.urlopen(argv[1]) as response:
             html = response.read()
-            print(html)
+            print(html.decode("utf-8", "replace"))
     except urle.HTTPError as error:
         print("Error code: {}".format(error.code))
