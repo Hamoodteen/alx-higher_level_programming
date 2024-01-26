@@ -13,6 +13,6 @@ if __name__ == "__main__":
             print("No result")
         else:
             rhg = req.headers
-            print("[{}] {}".format(rhg.get('id'), rhg.get('name')))
+            print("[{}] {}".format(rhg.get("id"), rhg.get("name")))
     except ValueError:
         print("Not a valid JSON")
