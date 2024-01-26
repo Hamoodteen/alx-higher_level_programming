@@ -5,11 +5,11 @@
 if __name__ == "__main__":
     from sys import argv
     import requests as rq
-    headers = {'q': argv[2] if len(argv) > 1 else ""}
+    headers = {'q': argv[1] if len(argv) > 1 else ""}
     try:
         req = rq.post("http://0.0.0.0:5000/search_user", data=headers)
         req.json()
-        if len(req) == 0:
+        if req == {}:
             print("No result")
         else:
             rhg = req.headers
