@@ -13,4 +13,5 @@ if __name__ == "__main__":
     req = urllib.request.Request(url, email)
     with urllib.request.urlopen(req) as response:
         head = response.read()
-        print("Your email is: {}".format(head))
+        em = response.getheader('email')
+        print("Your email is: {}".format(em))
