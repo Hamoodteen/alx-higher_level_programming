@@ -5,8 +5,8 @@
 if __name__ == "__main__":
     from sys import argv
     import requests as rq
-    header = '' if len(argv) == 1 else argv[1]
-    data = {"q": header}
+    header = "" if len(argv) == 1 else argv[1]
+    data = {'q': header}
     req = rq.post("http://0.0.0.0:5000/search_user", data=data)
     try:
         rj = req.json()
@@ -14,6 +14,6 @@ if __name__ == "__main__":
             print("No result")
         else:
             rhg = req.headers
-            print("[{}] {}".format(rhg.get("id"), rhg.get("name")))
+            print("[{}] {}".format(rhg.get('id'), rhg.get('name')))
     except ValueError:
         print("Not a valid JSON")
