@@ -8,8 +8,8 @@ if __name__ == "__main__":
     headers = {'q': argv[1] if len(argv) > 1 else ""}
     try:
         req = rq.post("http://0.0.0.0:5000/search_user", data=headers)
-        req.json()
-        if req == {}:
+        rj = req.json()
+        if rj == {}:
             print("No result")
         else:
             rhg = req.headers
