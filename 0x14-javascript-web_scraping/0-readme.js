@@ -1,7 +1,7 @@
 #!/usr/bin/node
 // commenttttttttttttttttttttttttttttt
 
-let fs = require('fs');
+const fs = require('fs');
 const args = process.argv;
 fs.readFile(args[2], 'utf8', function (err, data) {
   if (err) {
