@@ -9,9 +9,10 @@ req({ url: myurl, methods: 'GET' }, function (err, response, body) {
   } else {
     let cnt = 0;
     const films = JSON.parse(body);
-    for (const i of films.results) {
-      for (const j of i.characters) {
-        if (j === 'https://swapi-api.alx-tools.com/api/people/18/') {
+    for (let i = 0; i < films.results.length; i++) {
+      const characters = films.results[i].characters;
+      for (let j = 0; j < characters.length; j++) {
+        if (characters[j] === 'https://swapi-api.alx-tools.com/api/people/18/') {
           cnt++;
         }
       }
