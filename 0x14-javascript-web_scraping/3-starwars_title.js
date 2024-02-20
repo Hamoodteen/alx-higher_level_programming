@@ -3,10 +3,11 @@
 
 const req = require('request');
 const args = process.argv;
-req(('https://swapi-api.alx-tools.com/api/films/' + args[2]), function (err, response, body) {
+const myurl = ('https://swapi-api.alx-tools.com/api/films/' + args[2]);
+req({ url: myurl, methods: 'GET' }, function (err, response, body) {
   if (err) {
     console.log(err);
   } else {
-    console.log(body.title);
+    console.log(JSON.parse(body).title);
   }
 });
