@@ -24,6 +24,6 @@ req({ url: myurl, methods: 'GET' }, function (err, response, body) {
     donelist.forEach((value, index) => {
       donedict[index + 1] = value;
     });
-    console.log(JSON.parse(JSON.stringify(donedict)));
+    console.log(donedict);
   }
 });
