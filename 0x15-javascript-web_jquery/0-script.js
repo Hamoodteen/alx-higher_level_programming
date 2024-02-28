@@ -1,5 +1,5 @@
 #!/usr/bin/node
 // commenttttttttttttttttttttttttttttt
 
-let header = document.querySelector('header');
+const header = document.querySelector('header');
 header.style.color = 'red';
