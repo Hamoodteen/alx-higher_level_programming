@@ -2,8 +2,8 @@
 // commenttttttttttttttttttttttttttttt
 
 $(document).ready(function () {
-  const charapi = 'https://swapi-api.alx-tools.com/api/films/?format=json';
-  fetch(charapi)
+  const titleapi = 'https://swapi-api.alx-tools.com/api/films/?format=json';
+  fetch(titleapi)
     .then(response => {
       return response.json();
     })
